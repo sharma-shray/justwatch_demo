@@ -16,6 +16,18 @@ describe('Launch Browser',()=>{
         await page.getByRole('button', { name: 'submit' }).click();
         // verify that an error message is thrown.
         await expect(page.getByText('Please contact our support to raise your maximum quote budget', { exact: true })).toBeVisible();
+
+        // enter another invalid quotation
+        await page.fill("input[name=quote amount]","100001");
+        await page.getByRole('button', { name: 'submit' }).click();
+        // verify that an error message is thrown.
+        await expect(page.getByText('Please contact our support to raise your maximum quote budget', { exact: true })).toBeVisible();
+
+        // enter an invalid quotation
+        await page.fill("input[name=quote amount]","99999");
+        await page.getByRole('button', { name: 'submit' }).click();
+        // verify that an error message is thrown.
+        await expect(page.getByText('congratulations the quotation has been submitted.', { exact: true })).toBeVisible();
         await browser.close();
 
     })
