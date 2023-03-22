@@ -12,7 +12,7 @@ describe('Launch Browser',()=>{
         //navigate to the webpage
         await page.goto('http://www.jw-business-api.com');
         // enter an invalid quotation
-        await page.fill("input[name=quote amount]","1000000000");
+        await page.fill("input[name=quote amount]","100000");
         await page.getByRole('button', { name: 'submit' }).click();
         // verify that an error message is thrown.
         await expect(page.getByText('Please contact our support to raise your maximum quote budget', { exact: true })).toBeVisible();
