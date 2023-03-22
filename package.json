@@ -1,0 +1,38 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "jest-playwright-preset": "^1.4.5",
+    "playwright": "^1.16.3",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testTimeout": 120000
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest-dom": "^4.0.0"
+  }
+}
