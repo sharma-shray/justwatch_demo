@@ -65,9 +65,5 @@ If a human is just told to do more work he will resist . rather introduce tester
 
 
 
-
-
-Introducing the culture that things should be done properly and not 
-
 Note:
-I do not have experience with go lonag and with creating microservices
+I do not have experience with go lonag and with creating microservices so i have chosen typescript .
